@@ -12,6 +12,7 @@
     "build": "wxt build",
     "zip": "wxt zip",
     "brand:export": "node scripts/export-brand.mjs",
+    "store:screenshots": "node scripts/store-screenshots.mjs",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",

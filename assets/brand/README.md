@@ -19,6 +19,8 @@ matching the existing reader's blue interface palette.
 | `store-small-440x280.png` | Optional Chrome Web Store small promotional tile |
 | `store-marquee-1400x560.png` | Optional Chrome Web Store marquee promotional tile |
 | `store-settings-1280x800.png` | Actual settings-page screenshot from the packaged extension |
+| `store-word-1280x800.png` | Actual Word-mode screenshot from the packaged extension |
+| `store-line-1280x800.png` | Actual Line-mode screenshot from the packaged extension |
 | `preview.png` | Light/dark comparison and size preview; not a store screenshot |
 
 The master is raster artwork; these exports do not include an editable vector
@@ -37,7 +39,8 @@ masters and promotional images stay outside the extension ZIP.
 The store requires the 128px icon and at least one actual product screenshot at
 1280×800 or 640×400. Promotional tiles and the preview are not screenshots.
 The included settings screenshot was captured from the loaded extension in Chrome;
-recapture it after interface changes. `brand:export` does not regenerate screenshots.
+recapture it after interface changes using `npm run store:screenshots` after building.
+This also captures Word and Line modes. `brand:export` does not regenerate screenshots.
 Publishing the listing also requires its descriptions, privacy disclosures, and
 developer-account submission; this asset task does not submit anything.
 

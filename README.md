@@ -70,4 +70,4 @@ third-party PDF viewers need separate compatibility checks. Local HTML requires
 Permissions: `activeTab`, `scripting`, and `storage`. No persistent all-sites access,
 analytics, accounts, or text uploads. Selected text stays in session memory.
 
-[Design decisions](docs/decisions.md) · [Logo and publishing assets](assets/brand/README.md)
+[Privacy policy](PRIVACY.md) · [Design decisions](docs/decisions.md) · [Logo and publishing assets](assets/brand/README.md)
