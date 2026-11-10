@@ -1,0 +1,10 @@
+Use case: logo-brand.
+Asset type: production app icon for QuickRead, a Chrome extension that shows selected webpage text one word at a time.
+Primary request: Create one exceptionally clean geometric Q monogram whose lower-right tail becomes a bold forward-pointing reading cue. Single cohesive symbol, readable at 16 pixels. Dark rounded-square app tile with a warm golden amber mark, matching the existing product colours #17191f and #f0c77b.
+Style: flat precise vector-like brand design, large simple shapes, balanced negative space, quiet editorial feel. No gradients, shadows, textures, decorative sparkles, speed lines, books or additional symbols.
+Composition: square 1024x1024 image. One centred rounded-square tile occupying 75% of the canvas width, transparent outside the tile. The Q symbol fills about 68% of the tile; generous internal margins. The tail suggests moving forward without a separate play triangle.
+Text: no words or labels. No mockup. No presentation sheet. Only the icon.
+Constraints: genuine transparent background surrounding the tile, sharp simple geometry, strong silhouette on light and dark browser toolbars.
+
+Subsequent user-directed colour edit, using the generated image as the edit target:
+Recolour this QuickRead logo: replace the gold colour of the Q-shaped arrow with light blue #8FABD4. Keep the logo shape, dark square tile, transparent outer background and layout unchanged.

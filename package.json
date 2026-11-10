@@ -1,0 +1,29 @@
+{
+  "name": "quickread",
+  "description": "Read selected webpage text one word at a time, locally in Chrome.",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "engines": {
+    "node": "^22.22.2 || ^24.15.0 || >=26.0.0"
+  },
+  "scripts": {
+    "dev": "wxt",
+    "build": "wxt build",
+    "zip": "wxt zip",
+    "brand:export": "node scripts/export-brand.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:chrome": "node scripts/chrome-smoke.mjs",
+    "postinstall": "wxt prepare"
+  },
+  "devDependencies": {
+    "jsdom": "31.0.0",
+    "playwright-core": "1.65.0",
+    "typescript": "7.0.2",
+    "vite": "8.3.6",
+    "vitest": "5.1.0",
+    "wxt": "0.21.5"
+  }
+}

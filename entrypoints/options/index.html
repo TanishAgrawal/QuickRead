@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="manifest.open_in_tab" content="true">
+    <title>QuickRead settings</title>
+    <link rel="icon" type="image/png" href="/icons/icon-32.png">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="brand"><img class="mark" src="/icons/icon-48.png" width="32" height="32" alt=""> QuickRead</div>
+        <p class="eyebrow">YOUR READING, YOUR RHYTHM</p>
+        <h1>A little room to focus.</h1>
+        <p class="intro">Highlight text on a webpage, activate QuickRead, then press Start. Choose Word or a smoothly scrolling Line in the reader, with the page still within reach.</p>
+      </header>
+      <form id="settings">
+        <section aria-labelledby="pace-title">
+          <div class="section-heading"><span class="section-number">01</span><div><h2 id="pace-title">Set your pace</h2><p>Start comfortably. Change speed from the reader at any time.</p></div></div>
+          <div class="fields two-columns">
+            <label>Reading speed <span class="input-unit"><input name="wpm" type="number" min="60" max="1200" step="10" required><span>WPM</span></span></label>
+            <label>Jump distance <span class="input-unit"><input name="jumpWords" type="number" min="1" max="100" step="1" required><span>words</span></span></label>
+          </div>
+        </section>
+        <section aria-labelledby="rhythm-title">
+          <div class="section-heading"><span class="section-number">02</span><div><h2 id="rhythm-title">Leave a little breathing room</h2><p>Extra time after each word. If pauses overlap, the longest wins.</p></div></div>
+          <div class="fields three-columns">
+            <label>Comma, colon, semicolon <span class="input-unit"><input name="minorPauseMs" type="number" min="0" max="2000" step="1" required><span>ms</span></span></label>
+            <label>Sentence ending <span class="input-unit"><input name="sentencePauseMs" type="number" min="0" max="2000" step="1" required><span>ms</span></span></label>
+            <label>Paragraph break <span class="input-unit"><input name="paragraphPauseMs" type="number" min="0" max="2000" step="1" required><span>ms</span></span></label>
+          </div>
+          <p class="note">At 300 WPM, a word lasts 200 ms before extra pauses. Paragraph timing depends on the line breaks supplied by the selected webpage.</p>
+        </section>
+        <section aria-labelledby="keys-title">
+          <div class="section-heading"><span class="section-number">03</span><div><h2 id="keys-title">Keep the controls close</h2><p>Focus a shortcut field and press a key or combination. Tab moves to the next field.</p></div></div>
+          <div class="fields two-columns">
+            <label>Pause / resume <input name="pause" class="key" type="text" readonly aria-describedby="key-note"></label>
+            <label>Close reader <input name="close" class="key" type="text" readonly aria-describedby="key-note"></label>
+            <label>Jump backward <input name="backward" class="key" type="text" readonly aria-describedby="key-note"></label>
+            <label>Jump forward <input name="forward" class="key" type="text" readonly aria-describedby="key-note"></label>
+          </div>
+          <p class="note" id="key-note">Jumping preserves paused or playing state. Controls leave typing in page fields alone. Site or browser shortcuts may take priority.</p>
+          <div class="activation"><div><h3>Activate QuickRead</h3><p>Current shortcut: <strong id="activation-key">Loading…</strong></p></div><button type="button" class="secondary" id="shortcuts">Change in Chrome ↗</button></div>
+        </section>
+        <div class="form-footer"><button type="button" class="text-button" id="defaults">Restore form defaults</button><button type="submit" class="primary" id="save" disabled>Save preferences</button></div>
+        <p id="save-status" role="status" aria-live="polite"></p>
+      </form>
+      <aside class="privacy"><span class="privacy-dot" aria-hidden="true"></span><div><h2>Reading stays on this device.</h2><p>QuickRead saves preferences and panel position locally. Selected text stays in memory for the reading session. No accounts, analytics, or text uploads.</p></div></aside>
+      <footer><p>Works with selectable webpage text. Chrome’s built-in PDF viewer, browser pages, and the Chrome Web Store are unsupported in this version. Cross-origin frames and canvas-based editors may not expose selection. Local HTML files require “Allow access to file URLs” in extension details.</p><p>The panel starts at the top right and remembers where you drag it. Resize from its bottom-right corner. Reset clears the session and loads your next highlight, ready for Start. Switching tabs pauses playback.</p></footer>
+    </main>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>
